@@ -1,0 +1,13 @@
+package component:hello;
+
+interface message {
+    hello-world: func() -> string;
+}
+
+world hello {
+    export message;
+}
+
+world app {
+    import message;
+}
