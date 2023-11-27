@@ -11,6 +11,10 @@ RUN apt update
 RUN apt install -y curl
 RUN curl https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb > /tmp/packages-microsoft-prod.deb
 RUN dpkg -i /tmp/packages-microsoft-prod.deb
-# RUN apt-add-repository ppa:lttng/stable-2.13
 RUN apt update
-# RUN apt install -y powershell cmake build-essential liblttng-ust-dev lttng-tools
+RUN apt install -y powershell
+RUN apt install -y cmake
+RUN apt install -y build-essential
+RUN apt install -y liblttng-ust-dev
+RUN apt install -y lttng-tools
+RUN apt install -y linux-tools-`uname -r`
