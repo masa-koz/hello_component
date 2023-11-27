@@ -18,4 +18,4 @@ RUN apt install -y build-essential
 RUN apt install -y liblttng-ust-dev
 RUN apt install -y lttng-tools
 RUN apt install -y linux-tools-`uname -r`
-RUN apt install -y aspnetcore-runtime-8.0 dotnet-sdk-8.0
+RUN apt install -y dotnet-sdk-6.0
