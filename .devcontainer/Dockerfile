@@ -11,6 +11,10 @@ RUN apt update
 RUN apt install -y curl
 RUN curl https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb > /tmp/packages-microsoft-prod.deb
 RUN dpkg -i /tmp/packages-microsoft-prod.deb
+RUN echo 'Package: *\n\
+Pin: origin "packages.microsoft.com"\n\
+Pin-Priority: 1001'\
+> /etc/apt/preferences.d/99microsoft-dotnet.pref
 RUN apt update
 RUN apt install -y powershell
 RUN apt install -y cmake
