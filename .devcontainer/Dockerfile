@@ -11,3 +11,5 @@ RUN apt update
 RUN apt install -y curl
 RUN curl https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb > /tmp/packages-microsoft-prod.deb
 RUN dpkg -i /tmp/packages-microsoft-prod.deb
+RUN apt update
+RUN apt install -y powershell
